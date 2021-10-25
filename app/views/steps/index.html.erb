@@ -1,0 +1,13 @@
+<h1> All Steps </h1>
+
+
+<% step.each do |step| %>
+
+<%= image_tag step.image, :class => 'thumb' if step.image.present? %>
+<ul>
+<li>Location: <%= link_to step.location, step %></li>
+<li>Story: <%= step.story %></li>
+<li>Departure Date: <%= journey.departure_date %></li>
+<li>Return date: <%= journey.return_date %></li>
+</ul>
+<% end %>

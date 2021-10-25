@@ -1,0 +1,18 @@
+<h1>Welcome to Traveller!</h1>
+
+<p>Plan, blog and share your adventures</p>
+<% if @current_user.present? %>
+  <h1>Welcome back <%= @current_user.name %></h1>
+<% end %>
+
+
+<% @journeys.each do |journey| %>
+
+<%= image_tag journey.image, :class => 'thumb' if journey.image.present? %>
+<ul>
+<li>Name: <%= link_to journey.name, journey %></li>
+<li>Countries: <%= journey.countries %></li>
+<li>Departure Date: <%= journey.departure_date.strftime '%A, %B %e, %Y' %></li>
+<li>Return date: <%= journey.return_date.strftime '%A, %B %e, %Y' %></li>
+</ul>
+<% end %>

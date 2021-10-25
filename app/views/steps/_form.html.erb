@@ -1,0 +1,18 @@
+<%= form_for @step do |f| %>
+<%= f.label :location %>
+<%= f.text_field :location, :required => true %>
+
+<%= f.label :story %>
+<%= f.text_field :story %>
+
+<%= f.label :dob, 'Date' %>
+<%= f.text_field :dob, :placeholder => 'YYYY-MM-DD' %>
+
+<%= f.label :image %>
+<%= f.url_field :image %>
+
+  <%= f.label :journey_id %>
+  <%= f.select :journey_id, Journey.pluck(:name, :id), :include_blank => true %>
+
+<%= f.submit %>
+<% end %>

@@ -1,0 +1,25 @@
+
+
+<h1><%= @journey.name %></h1>
+
+<%= image_tag @journey.image, :class => 'feature' if @journey.image.present? %>
+<ul>
+  <li>Name: <%= @journey.name %></li>
+  <li>Countries: <%= @journey.countries %></li>
+  <li>Departure Date: <%= @journey.departure_date %></li>
+  <li>Return date: <%= @journey.return_date %></li>
+  </ul>
+
+<% @journey.steps.each do |step| %>
+<%= link_to image_tag(step.image, :class => 'thumb'), step %>
+<ul>
+  <li><%= step.location %></li>
+  <li><%= step.story %></li>
+  <li><%= step.date %></li>
+</ul>
+<% end %>
+
+<div class="controls">
+  <%= link_to 'Edit Journey', edit_journey_path(@journey) %>
+  <%= link_to 'Delete journey', @journey, :method => 'delete', :class => 'hotdogs', :data => { :confirm => 'Are you sure!' } %>
+</div>

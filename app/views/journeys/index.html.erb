@@ -1,0 +1,13 @@
+<h1> All Journeys </h1>
+
+
+<% @journeys.each do |journey| %>
+
+<%= image_tag journey.image, :class => 'thumb' if journey.image.present? %>
+<ul>
+<li>Name: <%= link_to journey.name, journey %></li>
+<li>Countries: <%= journey.countries %></li>
+<li>Departure Date: <%= journey.departure_date.strftime '%A, %B %e, %Y'%></li>
+<li>Return date: <%= journey.return_date.strftime '%A, %B %e, %Y'%></li>
+</ul>
+<% end %>
