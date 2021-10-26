@@ -8,10 +8,14 @@ class StepsController < ApplicationController
   def new
     @step = Step.new
   end
+
   def create
-    step = Step.create work_params
-    redirect_to step
+    step = Step.create step_params
+    Journey.find_by(id: step.journey_id).steps << step
+     # params[:id], :location => params[:location], :story => params[:story], :date => params[:date], :image => params[:image]
+    redirect_to journey_path(step.journey_id)
   end
+
   def edit
     @step = Step.find params[:id]
   end
@@ -25,11 +29,11 @@ class StepsController < ApplicationController
   def destroy
     step = Step.find params[:id]
     step.destroy
-    redirect_to steps_path
+    redirect_to step.journey
   end
 
   private
   def step_params
-    params.require(:step).permit(:title, :year, :medium, :style, :image, :journey_id)
+    params.require(:step).permit(:location, :user_id, :journey_id, :story, :date, :image)
   end
 end

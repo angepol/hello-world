@@ -2,7 +2,7 @@ class JourneysController < ApplicationController
   # before_action :check_for_login
 
   def index
-  @journeys = Journey.all
+  @journeys = Journey.where(:user_id => @current_user.id)
   end
 
   def show
@@ -15,8 +15,10 @@ class JourneysController < ApplicationController
 
   def create
     journey = Journey.create journey_params
+    # puts journey.errors
+    # raise "hell"
    @current_user.journeys << journey
-    redirect_to root_path
+    redirect_to journeys_path
   end
 
 def edit
@@ -33,7 +35,7 @@ end
  def destroy
 journey = Journey.find params[:id]
   journey.destroy
-   redirect_to journey_path
+   redirect_to root_path
 end
 
   private

@@ -1,5 +1,5 @@
 body {
-  background-color: #ccd;
+  background-color: aliceblue;
 }
 
 .container {
@@ -7,11 +7,20 @@ body {
   margin: 0 auto;
 }
 
-
 .thumb {
   height: 12em;
 }
 
 .feature {
   max-height: 30em;
+}
+
+#map {
+   /* position: absolute; */
+/*
+  /* display: block; */
+  /* margin-right: auto; */ */
+  /* bottom: 0; */
+width: 100%;
+vertical-align: middle; float: right;
 }

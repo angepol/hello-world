@@ -3,10 +3,10 @@
 <%= f.text_field :location, :required => true %>
 
 <%= f.label :story %>
-<%= f.text_field :story %>
+<%= f.text_area :story, maxlength: 1000, size: 30 %>
 
-<%= f.label :dob, 'Date' %>
-<%= f.text_field :dob, :placeholder => 'YYYY-MM-DD' %>
+<%= f.label :date, 'Date' %>
+<%= f.date_field :date, :placeholder => 'YYYY-MM-DD' %>
 
 <%= f.label :image %>
 <%= f.url_field :image %>

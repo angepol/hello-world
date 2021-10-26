@@ -20,6 +20,7 @@
 <% end %>
 
 <div class="controls">
+  <%= link_to 'Create Step', new_step_path %>
   <%= link_to 'Edit Journey', edit_journey_path(@journey) %>
   <%= link_to 'Delete journey', @journey, :method => 'delete', :class => 'hotdogs', :data => { :confirm => 'Are you sure!' } %>
 </div>

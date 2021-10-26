@@ -1,7 +1,9 @@
 <h1> All Journeys </h1>
 
-
-<% @journeys.each do |journey| %>
+<% if @current_user.journeys.empty? %>
+<p> No journeys to show</p>
+<% else %>
+<% @current_user.journeys.each do |journey| %>
 
 <%= image_tag journey.image, :class => 'thumb' if journey.image.present? %>
 <ul>
@@ -10,4 +12,5 @@
 <li>Departure Date: <%= journey.departure_date.strftime '%A, %B %e, %Y'%></li>
 <li>Return date: <%= journey.return_date.strftime '%A, %B %e, %Y'%></li>
 </ul>
+<% end %>
 <% end %>

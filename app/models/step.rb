@@ -1,3 +1,3 @@
 class Step < ApplicationRecord
-  belongs_to :journeys, :optional => true
+  belongs_to :journey, :optional => true
 end
