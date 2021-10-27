@@ -24,3 +24,27 @@
   <%= link_to 'Edit Journey', edit_journey_path(@journey) %>
   <%= link_to 'Delete journey', @journey, :method => 'delete', :class => 'hotdogs', :data => { :confirm => 'Are you sure!' } %>
 </div>
+
+
+
+<div id="map" width=500px height=500px>
+  <script>
+	mapboxgl.accessToken = 'pk.eyJ1IjoiYW5nZXBvbCIsImEiOiJja3YzbHg4ZDcwcnM2Mm9xcG51ZG5lOGQzIn0.-ZjAUc6_dljaJQJsW7pcPw';
+const map = new mapboxgl.Map({
+container: 'map', // container ID
+style: 'mapbox://styles/angepol/ckv6njeji7sps15o2du4ju2g0', // style URL
+center: [<%= @journey.steps.first.longitude %>, <%= @journey.steps.first.latitude %>], // starting position [lng, lat]
+zoom: 11 // starting zoom
+});
+<% @journey.steps.each do |step| %>
+ new mapboxgl.Marker()
+.setLngLat([<%= step.longitude %>, <%= step.latitude %>])
+.addTo(map);
+<% end %>
+
+
+</script>
+</div>
+
+<!-- # get any map at all -->
+ <!-- get any maker to appear on the map based on lat and long -->

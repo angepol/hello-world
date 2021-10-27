@@ -6,13 +6,26 @@
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.js"></script>
+    <style>
+    body { margin: 10; padding: 10; }
 
-   <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
-   <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
 
-  </head>
+/* <!--
+.marker {
+  background-image: url ('mapbox-icon.png');
 
-  <body>
+} --> */
+
+
+
+   </style>
+   </head>
+
+  <!-- <body>
     <div id='map' style='width: 400px; height: 300px;'></div>
     <script>
     mapboxgl.accessToken = 'pk.eyJ1IjoiYW5nZXBvbCIsImEiOiJja3YzbHg4ZDcwcnM2Mm9xcG51ZG5lOGQzIn0.-ZjAUc6_dljaJQJsW7pcPw';
@@ -22,13 +35,12 @@
     style: 'mapbox://styles/angepol/ckv6l69yk1pln15ngckywwr2t'
 
     });
-    </script>
-
+    <!-- </script> -->
     <!-- <iframe
     width='100%'
-    height='400px' -->
+    height='400px'
 
-    <!-- src="https://api.mapbox.com/styles/v1/angepol/ckv6l69yk1pln15ngckywwr2t.html?title=false&access_token=pk.eyJ1IjoiYW5nZXBvbCIsImEiOiJja3YzbHg4ZDcwcnM2Mm9xcG51ZG5lOGQzIn0.-ZjAUc6_dljaJQJsW7pcPw&zoomwheel=false#13/33.75001/-118.4106"
+  src="https://api.mapbox.com/styles/v1/angepol/ckv6l69yk1pln15ngckywwr2t.html?title=false&access_token=pk.eyJ1IjoiYW5nZXBvbCIsImEiOiJja3YzbHg4ZDcwcnM2Mm9xcG51ZG5lOGQzIn0.-ZjAUc6_dljaJQJsW7pcPw&zoomwheel=false#13/33.75001/-118.4106"
     title="Satellite Streets"
     style="border:none;"></iframe> -->
 
@@ -38,7 +50,6 @@
         <% if @current_user.admin? %>
           <%= link_to 'All users', users_path %>
 
-
         <% end %>
         <%= link_to 'All Journeys', journeys_path %>
         <%= link_to 'New Journey', new_journey_path %>
@@ -47,11 +58,6 @@
         <%= link_to 'Sign up', new_user_path %>
         <%= link_to 'Sign in', login_path %>
       <% end %>
-
-
-
-
-
 
     </nav>
     <%= yield %>

@@ -11,6 +11,35 @@
   <li>Date: <%= @step.date.strftime '%A, %B %e, %Y' if @step.date.present? %></li>
 </ul>
 
+
+
+<div id="map" width=500px height=500px>
+  <script>
+	mapboxgl.accessToken = 'pk.eyJ1IjoiYW5nZXBvbCIsImEiOiJja3YzbHg4ZDcwcnM2Mm9xcG51ZG5lOGQzIn0.-ZjAUc6_dljaJQJsW7pcPw';
+const map = new mapboxgl.Map({
+container: 'map', // container ID
+style: 'mapbox://styles/angepol/ckv6njeji7sps15o2du4ju2g0', // style URL
+center: [<%= @step.longitude %>, <%= @step.latitude %>], // starting position [lng, lat]
+zoom: 11 // starting zoom
+});
+
+// Create a new marker.
+const marker = new mapboxgl.Marker()
+.setLngLat([<%= @step.longitude %>, <%= @step.latitude %>])
+.addTo(map);
+
+
+</script>
+</div>
+
+
+
+
+
+
+
+
+
 <div class="controls">
   <%= link_to 'Edit Step', edit_step_path(@step) %>
   <%= link_to 'Journey', journey_path(@step.journey) %>

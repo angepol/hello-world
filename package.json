@@ -1,5 +1,7 @@
 {
   "name": "traveller",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "@mapbox/mapbox-gl-geocoder": "^4.7.4"
+  }
 }
