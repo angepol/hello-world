@@ -9,16 +9,16 @@ puts "#{ Journey.count } journeys created."
 
 Step.destroy_all
 
-s1 = Step.create(:location => "Berkley, SanFransisco", :story => "Today we left Berkley, made a packed lunch and hit the road.",:date => "2016-07-05",:image => "https://oregonisforadventure.com/wp-content/uploads/2020/02/things-to-do-in-northern-california-road-trip-1536x1024.jpg.webp" )
-s2 = Step.create(:location => "Big Sur", :story => "Stopped in Big Sur for a swim, we stayed at the camp ground",:date => "2016-07-06",:image => "https://www.outsideonline.com/wp-content/uploads/2019/10/08/big-sur-waterfall_h.jpg" )
-s3 = Step.create(:location => "Pfeiffer Beach", :story => "Here we explored the glorious coastline",:date => "2016-07-08",:image => "https://www.californiabeaches.com/wp-content/uploads/2014/09/Screenshot-2014-10-30-14.09.57-1000x505.jpg" )
-s4 = Step.create(:location => "Pfeiffer Beach", :story => "Here we explored the glorious coastline",:date => "2016-07-09",:image => "https://www.californiabeaches.com/wp-content/uploads/2014/09/Screenshot-2014-10-30-14.09.57-1000x505.jpg" )
-s5 = Step.create(:location => "Pfeiffer Big Sur State Park", :story => "We adventured in the woods",:date => "2016-07-10",:image => "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrYW3ycaijELMMEwjb5NLyuenQgHWA-kWE_Q&usqp=CAU" )
-s6 = Step.create(:location => "Notley's landing", :story => "We enjoyed a spectacular lunch",:date => "2016-07-12",:image => "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQMq5b0qd-3nUiWeBd8Coittm3P-k9WeOlsQ&usqp=CAU" )
-s7 = Step.create(:location => "Berkley SanFransisco", :story => "Today we arrive back in Berkley after a wonderful coastal adventure. Feeling revitalised! ",:date => "2016-07-13",:image => "https://ap.rdcpix.com/6465a43fc55e895a777e1d12a2d188f7l-m3324943455od-w480_h360.jpg" )
-s8 = Step.create(:location => "Byron Bay", :story => "I left to go on tour ",:date => "2019-09-17",:image => "https://ap.rdcpix.com/6465a43fc55e895a777e1d12a2d188f7l-m3324943455od-w480_h360.jpg" )
-s9 = Step.create(:location => "Sydney", :story => "We stoped over in Syndey",:date => "2019-09-18",:image => "https://ap.rdcpix.com/6465a43fc55e895a777e1d12a2d188f7l-m3324943455od-w480_h360.jpg" )
-s10 = Step.create(:location => "Melbourne", :story => "We arrived in Melbourne",:date => "2016-19-1",:image => "https://ap.rdcpix.com/6465a43fc55e895a777e1d12a2d188f7l-m3324943455od-w480_h360.jpg" )
+s1 = Step.create(:location => "Berkeley, CA, USA", :story => "Today we left Berkley, made a packed lunch and hit the road.",:date => "2016-07-05",:image => "https://oregonisforadventure.com/wp-content/uploads/2020/02/things-to-do-in-northern-california-road-trip-1536x1024.jpg.webp" )
+s2 = Step.create(:location => "Big Sur, CA, USA", :story => "Stopped in Big Sur for a swim, we stayed at the camp ground",:date => "2016-07-06",:image => "https://www.outsideonline.com/wp-content/uploads/2019/10/08/big-sur-waterfall_h.jpg" )
+s3 = Step.create(:location => "Pfeiffer Beach, CA, USA", :story => "Here we explored the glorious coastline",:date => "2016-07-08",:image => "https://www.californiabeaches.com/wp-content/uploads/2014/09/Screenshot-2014-10-30-14.09.57-1000x505.jpg" )
+s4 = Step.create(:location => "San Carpoforo Creek, San Simeon, CA, USA", :story => "Here we explored the glorious coastline",:date => "2016-07-09",:image => "https://www.californiabeaches.com/wp-content/uploads/2014/09/Screenshot-2014-10-30-14.09.57-1000x505.jpg" )
+s5 = Step.create(:location => "Ragged Point, CA, USA", :story => "We went for a hike!",:date => "2016-07-10",:image => "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrYW3ycaijELMMEwjb5NLyuenQgHWA-kWE_Q&usqp=CAU" )
+s6 = Step.create(:location => "Notley's landing, CA, USA", :story => "We enjoyed a spectacular lunch",:date => "2016-07-12",:image => "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQMq5b0qd-3nUiWeBd8Coittm3P-k9WeOlsQ&usqp=CAU" )
+s7 = Step.create(:location => "Berkeley, CA, USA", :story => "Today we arrive back in Berkley after a wonderful coastal adventure. Feeling revitalised! ",:date => "2016-07-13",:image => "https://ap.rdcpix.com/6465a43fc55e895a777e1d12a2d188f7l-m3324943455od-w480_h360.jpg" )
+s8 = Step.create(:location => "Byron Bay, NSW, Australia", :story => "I left to go on tour ",:date => "2019-09-17",:image => "https://ap.rdcpix.com/6465a43fc55e895a777e1d12a2d188f7l-m3324943455od-w480_h360.jpg" )
+s9 = Step.create(:location => "Sydney, NSW, Australia", :story => "We stoped over in Sydndey",:date => "2019-09-18",:image => "https://ap.rdcpix.com/6465a43fc55e895a777e1d12a2d188f7l-m3324943455od-w480_h360.jpg" )
+s10 = Step.create(:location => "Melbourne, Vic, Australia", :story => "We arrived in Melbourne",:date => "2016-19-1",:image => "https://ap.rdcpix.com/6465a43fc55e895a777e1d12a2d188f7l-m3324943455od-w480_h360.jpg" )
 
 puts "#{ Step.count } steps "
 
