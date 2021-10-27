@@ -8,42 +8,14 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link href="https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.css" rel="stylesheet">
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.js"></script>
     <style>
-    body { margin: 10; padding: 10; }
-
-
-/* <!--
-.marker {
-  background-image: url ('mapbox-icon.png');
-
-} --> */
-
-
-
-   </style>
+    </style>
    </head>
-
-  <!-- <body>
-    <div id='map' style='width: 400px; height: 300px;'></div>
-    <script>
-    mapboxgl.accessToken = 'pk.eyJ1IjoiYW5nZXBvbCIsImEiOiJja3YzbHg4ZDcwcnM2Mm9xcG51ZG5lOGQzIn0.-ZjAUc6_dljaJQJsW7pcPw';
-
-    var map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/angepol/ckv6l69yk1pln15ngckywwr2t'
-
-    });
-    <!-- </script> -->
-    <!-- <iframe
-    width='100%'
-    height='400px'
-
-  src="https://api.mapbox.com/styles/v1/angepol/ckv6l69yk1pln15ngckywwr2t.html?title=false&access_token=pk.eyJ1IjoiYW5nZXBvbCIsImEiOiJja3YzbHg4ZDcwcnM2Mm9xcG51ZG5lOGQzIn0.-ZjAUc6_dljaJQJsW7pcPw&zoomwheel=false#13/33.75001/-118.4106"
-    title="Satellite Streets"
-    style="border:none;"></iframe> -->
-
+  <body>
+  <div class ="container">
     <nav>
       <%= link_to 'Home', root_path %>
       <% if @current_user.present? %>
@@ -58,7 +30,6 @@
         <%= link_to 'Sign up', new_user_path %>
         <%= link_to 'Sign in', login_path %>
       <% end %>
-
     </nav>
     <%= yield %>
   </body>

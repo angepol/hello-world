@@ -1,8 +1,7 @@
-
-<h1>All Users</h1>
-
+<div class="alert alert-info" role="alert">
+  <h1>All Users</h1>
+</div>
 <h2><%= User.count %> users</h2>
-
 <% @users.each do |user| %>
   <p><%= user.email %></p>
 <% end %>

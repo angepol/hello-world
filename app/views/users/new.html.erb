@@ -1,4 +1,6 @@
+<div class="alert alert-info" role="alert">
 <h1>sign up!</h1>
+</div>
 
 <% if @user.errors.any? %>
 <ol>
@@ -9,11 +11,23 @@
 <% end %>
 
  <%=  form_for @user do |f| %>
- <%= f.label :email %>
- <%= f.email_field :email %>
- <%= f.password_field :password %>
-<%= f.label :password_confirmation %>
- <%= f.password_field :password_confirmation %>
 
-<%= f.submit "sign up!" %>
+ <div class="form-group"
+<%= f.label :name %>
+<%= f.text_field :name, :class => 'form-control' %>
+ </div>
+
+ <div class="form-group"
+ <%= f.label :email %>
+ <%= f.email_field :email, :class => 'form-control' %>
+ </div>
+  <div class="form-group"
+  <%= f.label :password %>
+ <%= f.password_field :password, :class => 'form-control'%>
+ </div>
+   <div class="form-group"
+<%= f.label :password_confirmation %>
+ <%= f.password_field :password_confirmation , :class => 'form-control' %>
+  </div>
+<%= f.submit "sign up!", :class => "btn btn-info" %>
 <%  end %>

@@ -1,6 +1,12 @@
-<h1>Welcome to Traveller!</h1>
 
-<p>Plan, blog and share your adventures</p>
+
+
+<div class="alert alert-info" role="alert">
+  <h1>Welcome to Traveller!</h1>
+    Plan, blog and share your adventures.
+</div>
+
+<!-- <p>Plan, blog and share your adventures</p> -->
 <% if @current_user.present? %>
   <h1>Welcome back <%= @current_user.name %></h1>
 <% end %>
