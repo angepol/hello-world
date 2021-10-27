@@ -1,8 +1,9 @@
 
 
 <h1><%= @journey.name %></h1>
-
+<div class="journey">
 <%= image_tag @journey.image, :class => 'feature' if @journey.image.present? %>
+</div>
 <ul>
   <li>Name: <%= @journey.name %></li>
   <li>Countries: <%= @journey.countries %></li>
@@ -26,7 +27,6 @@
 </div>
 
 
-
 <div id="map" width=500px height=500px>
   <script>
 	mapboxgl.accessToken = 'pk.eyJ1IjoiYW5nZXBvbCIsImEiOiJja3YzbHg4ZDcwcnM2Mm9xcG51ZG5lOGQzIn0.-ZjAUc6_dljaJQJsW7pcPw';
@@ -34,7 +34,7 @@ const map = new mapboxgl.Map({
 container: 'map', // container ID
 style: 'mapbox://styles/angepol/ckv6njeji7sps15o2du4ju2g0', // style URL
 center: [<%= @journey.steps.first.longitude %>, <%= @journey.steps.first.latitude %>], // starting position [lng, lat]
-zoom: 11 // starting zoom
+zoom: 25 // starting zoom
 });
 <% @journey.steps.each do |step| %>
  new mapboxgl.Marker()
@@ -45,6 +45,3 @@ zoom: 11 // starting zoom
 
 </script>
 </div>
-
-<!-- # get any map at all -->
- <!-- get any maker to appear on the map based on lat and long -->
