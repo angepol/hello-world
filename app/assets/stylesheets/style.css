@@ -1,5 +1,33 @@
-body {
-  background-color: aliceblue;
+body.pages.home {
+/* background-color: aliceblue; */
+/* background-image:url("/assets/background/atlas.jpg"); */
+/* background-image:url("/assets/background/earth.jpg"); */
+/* background-image:url("/assets/background/ice.jpg");  */
+ background-image:url("/assets/background/road.jpg");
+ background-size: cover;
+ background-repeat: no-repeat;
+/* background-size: 150px;
+ width: 300px;
+ height: 300px; */
+ /* border: 2px solid; */
+ /* overflow: scroll; */
+}
+
+body.journeys.index {
+background-color: aliceblue;
+}
+
+body.journeys.new {
+background-color: aliceblue;
+}
+
+body.journeys.show {
+background-color: aliceblue;
+}
+
+body.users.index {
+background-color: aliceblue;
+
 }
 
 .container {
@@ -9,9 +37,10 @@ body {
 
 .thumb {
   width: 12em;
+}
 
-
-
+.change {
+  display: inline-block;
 }
 
 .feature {
@@ -32,7 +61,6 @@ min-height: 90vh
 
 .step-info {
 list-style: none;
-
 }
 
 .marker {

@@ -6,7 +6,7 @@
       <%= image_tag @journey.image, :class => 'feature' if @journey.image.present? %>
       </div>
       <ul>
-        <li>Name: <%= @journey.name %></li>
+
         <li>Countries: <%= @journey.countries %></li>
         <li>Departure Date: <%= @journey.departure_date %></li>
         <li>Return date: <%= @journey.return_date %></li>
@@ -15,19 +15,20 @@
       <% @journey.steps.each do |step| %>
       <%= link_to image_tag(step.image, :class => 'thumb'), step %>
       <ul>
-        <li><%= step.location %></li>
-        <li><%= step.story %></li>
-        <li><%= step.date %></li>
+      <li class = 'step-info'> Location: <%= step.location %></li>
+      <li class = 'step-info'> Story: <%= step.story %></li>
+      <li class = 'step-info'> Date: <%= step.date %></li>
       </ul>
       <% end %>
 
-      <div class="controls">
-        <%= link_to 'Create Step', new_step_path %>
-        <%= link_to 'Edit Journey', edit_journey_path(@journey) %>
-        <%= link_to 'Delete journey', @journey, :method => 'delete', :class => 'hotdogs', :data => { :confirm => 'Are you sure!' } %>
+      <div class="controls ">
+        <%= button_to 'Create Step', new_step_path, :class => "btn btn-primary", :method => 'get' %>
+        <%= button_to 'Edit Journey', edit_journey_path(@journey), :class => "btn btn-warning", :method => 'get' %>
+        <%= button_to 'Delete Journey', @step, :method => 'delete', :data => { :confirm => 'Are you sure?' }, :class => "btn btn-danger" %>
       </div>
 
     </div>
+  <% if @journey.steps.any? %>
     <div class="col">
       <div id="map">
         <script>
@@ -51,5 +52,7 @@
       </div>
 
     </div>
+    <% end %>
   </div>
+
 </div>
