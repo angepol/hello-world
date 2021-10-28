@@ -8,7 +8,10 @@ body {
 }
 
 .thumb {
-  height: 12em;
+  width: 12em;
+
+
+
 }
 
 .feature {
@@ -24,6 +27,12 @@ width: 100%;
 border: 3px solid green;
 padding-top: 10%;
 min-height: 90vh
+}
+
+
+.step-info {
+list-style: none;
+
 }
 
 .marker {

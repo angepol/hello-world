@@ -1,19 +1,24 @@
+<div class="container">
+  <div class="row">
+  <div class="col">
 <h1><%= @step.location %></h1>
-
 <%= image_tag @step.image, :class => 'feature' if @step.image.present? %>
 
 <ul>
-  <li>Location: <%= @step.location %></li>
-<% if @step.journey.present? %>
-  <li>Journey: <%= link_to @step.journey.name, @step.journey %></li>
-    <% end %>
-  <li>Story: <%= @step.story %></li>
-  <li>Date: <%= @step.date.strftime '%A, %B %e, %Y' if @step.date.present? %></li>
+
+  <% if @step.journey.present? %>
+    <li class = 'step-info'> Journey: <%= link_to @step.journey.name, @step.journey %></li>
+      <% end %>
+    <li class = 'step-info'> Date: <%= @step.date.strftime '%A, %B %e, %Y' if @step.date.present? %></li>
+  <li class = 'step-info'> Location: <%= @step.location %></li>
+
+  <li class = 'step-info'> Story: <%= @step.story %></li>
+
 </ul>
-
-
-
-<div id="map" width=500px height=500px>
+</div>
+<!-- width=500px height=500px -->
+<div class="col">
+<div id="map">
   <script>
 	mapboxgl.accessToken = 'pk.eyJ1IjoiYW5nZXBvbCIsImEiOiJja3YzbHg4ZDcwcnM2Mm9xcG51ZG5lOGQzIn0.-ZjAUc6_dljaJQJsW7pcPw';
 const map = new mapboxgl.Map({
@@ -31,11 +36,13 @@ const marker = new mapboxgl.Marker()
 
 </script>
 </div>
-
+</div>
+</div>
 
 
 <div class="controls">
   <%= link_to 'Edit Step', edit_step_path(@step) %>
   <%= link_to 'Journey', journey_path(@step.journey) %>
   <%= link_to 'Delete Step', @step, :method => 'delete', :class => 'hotdogs', :data => { :confirm => 'Are you sure?' } %>
+</div>
 </div>
