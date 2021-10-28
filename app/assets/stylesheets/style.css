@@ -11,11 +11,7 @@ body.pages.home {
  background-image:url("/assets/background/road.jpg");
  background-size: cover;
  background-repeat: no-repeat;
-/* background-size: 150px;
- width: 300px;
- height: 300px; */
- /* border: 2px solid; */
- /* overflow: scroll; */
+
 }
 
 body.journeys.index {
@@ -66,16 +62,12 @@ padding-bottom: 5%
 }
 
 
-
-
-
 .bold {
-  font-weight: 800;
+font-weight: 800;
 }
 
 
 #map {
-/* position: fixed; */
 left: 0;
 right: 0;
 width: 100%;
