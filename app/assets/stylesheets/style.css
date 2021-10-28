@@ -1,3 +1,8 @@
+
+body {
+  min-height: 100vh;
+}
+
 body.pages.home {
 /* background-color: aliceblue; */
 /* background-image:url("/assets/background/atlas.jpg"); */
@@ -47,6 +52,27 @@ background-color: aliceblue;
   max-height: 30em;
   max-width: 100%;
 }
+
+ul {
+    margin: 2px; /* To remove default bottom margin */
+    padding: 0; /* To remove default left padding */
+}
+
+.controls {
+display: flex;
+flex-wrap: wrap;
+gap: 10px
+
+}
+
+
+
+
+
+.bold {
+  font-weight: 800;
+}
+
 
 #map {
 /* position: fixed; */

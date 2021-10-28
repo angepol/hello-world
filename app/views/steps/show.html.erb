@@ -33,7 +33,6 @@ const marker = new mapboxgl.Marker()
 .setLngLat([<%= @step.longitude %>, <%= @step.latitude %>])
 .addTo(map);
 
-
 </script>
 </div>
 </div>
@@ -41,8 +40,8 @@ const marker = new mapboxgl.Marker()
 
 
 <div class="controls">
-  <%= link_to 'Edit Step', edit_step_path(@step) %>
-  <%= link_to 'Journey', journey_path(@step.journey) %>
-  <%= link_to 'Delete Step', @step, :method => 'delete', :class => 'hotdogs', :data => { :confirm => 'Are you sure?' } %>
+  <%= button_to 'Edit Step', edit_step_path(@step), :class => "btn btn-warning", :method => 'get' %>
+  <%= button_to 'Journey', journey_path(@step.journey), :class => "btn btn-info", :method => 'get' %>
+  <%= link_to 'Delete Step', @step, :method => 'delete', :data => { :confirm => 'Are you sure?' }, :class => "btn btn-danger" %>
 </div>
 </div>
