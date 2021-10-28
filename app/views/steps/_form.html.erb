@@ -9,11 +9,7 @@
 <%= f.label :story %>
 <%= f.text_area :story, :class => 'form-control' %>
 </div>
-<!--
- <div class="mb-6">
-   <label for="exampleFormControlTextarea1" class="form-label">Story</label>
-   <textarea class="form-control" id="exampleFormControlTextarea1" rows="6"></textarea>
- </div> -->
+
 
 <div class="form-group"
 <%= f.label :date, 'Date' %>
@@ -25,13 +21,13 @@
 <%= f.url_field :image, :class => 'form-control' %>
 </div>
 
+
  <div class="col-sm-3">
   <label class="visually-hidden" for="specificSizeSelect"</label>
   <%= f.label :journey_id %>
-  <%= f.select :journey_id, Journey.pluck(:name, :id), :include_blank => true, :class => 'form-select',
+  <%= f.select :journey_id, @current_user.journeys.pluck(:name, :id), :include_blank => true, :class => 'form-select',
   :id =>"specificSizeSelect" %>
  </div>
 
-
-<%= f.submit "Edit Step", :class => 'btn btn-info' %>
-<% end %>
+ <%= f.submit "Done", :class => 'btn btn-info' %>
+ <% end %>

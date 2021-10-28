@@ -10,10 +10,10 @@
 
 <%= image_tag journey.image, :class => 'thumb' if journey.image.present? %>
 <ul>
-<li>Name: <%= link_to journey.name, journey %></li>
-<li>Countries: <%= journey.countries %></li>
-<li>Departure Date: <%= journey.departure_date.strftime '%A, %B %e, %Y'%></li>
-<li>Return date: <%= journey.return_date.strftime '%A, %B %e, %Y'%></li>
+<li class ='step-info'><span class ="bold">Name: </span><%= link_to journey.name, journey %></li>
+<li class ='step-info'><span class ="bold">Countries: </span><%= journey.countries %></li>
+<li class ='step-info'><span class ="bold">Departure Date: </span><%= journey.departure_date.strftime '%A, %B %e, %Y'%></li>
+<li class ='step-info'><span class ="bold">Return date: </span> <%= journey.return_date.strftime '%A, %B %e, %Y'%></li>
 </ul>
 <% end %>
 <% end %>

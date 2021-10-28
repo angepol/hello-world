@@ -6,13 +6,14 @@
 
 <ul>
 
-  <% if @step.journey.present? %>
-    <li class = 'step-info'> Journey: <%= link_to @step.journey.name, @step.journey %></li>
-      <% end %>
-    <li class = 'step-info'> Date: <%= @step.date.strftime '%A, %B %e, %Y' if @step.date.present? %></li>
-  <li class = 'step-info'> Location: <%= @step.location %></li>
 
-  <li class = 'step-info'> Story: <%= @step.story %></li>
+  <% if @step.journey.present? %>
+    <li class = 'step-info'><span class="bold"> Journey: </span><%= link_to @step.journey.name, @step.journey %></li>
+      <% end %>
+    <li class = 'step-info'><span class="bold"> Date: </span><%= @step.date.strftime '%A, %B %e, %Y' if @step.date.present? %></li>
+  <li class = 'step-info'><span class= "bold"> Location: </span><%= @step.location %></li>
+
+  <li class = 'step-info'><span class "bold"> Story: </span><%= @step.story %></li>
 
 </ul>
 </div>

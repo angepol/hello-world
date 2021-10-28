@@ -8,16 +8,16 @@
       <ul>
 
         <li><span class="bold">Countries: </span><%= @journey.countries %></li>
-        <li><span class="bold">Departure Date: </span> <%= @journey.departure_date %></li>
-        <li><span class="bold">Return Date: </span><%= @journey.return_date %></li>
+        <li><span class="bold">Departure Date: </span> <%= @journey.departure_date.strftime '%A, %B %e, %Y' %></li>
+        <li><span class="bold">Return Date: </span><%= @journey.return_date.strftime '%A, %B %e, %Y' %></li>
         </ul>
 
       <% @journey.steps.each do |step| %>
       <%= link_to image_tag(step.image, :class => 'thumb'), step %>
       <ul>
+      <li class = 'step-info'><span class="bold">Date: </span> <%= step.date.strftime '%A, %B %e, %Y' %></li>
       <li class = 'step-info'><span class="bold">Location: </span><%= step.location %></li>
       <li class = 'step-info'><span class="bold">Story: </span> <%= step.story %></li>
-      <li class = 'step-info'><span class="bold">Date: </span> <%= step.date %></li>
       </ul>
       <% end %>
 
